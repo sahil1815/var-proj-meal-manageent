@@ -65,7 +65,7 @@ const AdminDashboard = ({ onLogout }) => {
             <h3 className="font-semibold text-purple-800 mb-2">Current Feast Settings</h3>
             <div className="space-y-1 text-sm">
               <p><span className="font-medium">Hall:</span> {currentFeast.hall}</p>
-              <p><span className="font-medium">Time:</span> {currentFeast.time}</p>
+              <p><span className="font-medium">Time:</span> {currentFeast.bothtime ? currentFeast.bothtime : currentFeast.time}</p>
               <p><span className="font-medium">Price:</span> {currentFeast.price} Taka</p>
             </div>
           </div>
@@ -90,12 +90,13 @@ const AdminDashboard = ({ onLogout }) => {
             <label className="block text-sm font-medium text-gray-700 mb-2">Select Time</label>
             <select
               value={time}
-              onChange={(e) => setTime(e.target.value)}
+              onChange={(e) =>setTime(e.target.value)}
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
             >
               <option value="">Choose time...</option>
               <option value="Lunch">Lunch</option>
               <option value="Dinner">Dinner</option>
+              <option value="Both">Both</option>
             </select>
           </div>
 

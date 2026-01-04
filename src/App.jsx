@@ -40,7 +40,7 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden transition-colors duration-300">
-
+        
       <div className="absolute inset-0 opacity-20 transition-opacity duration-300">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3),transparent_50%)] dark:bg-[radial-gradient(circle_at_20%_80%,rgba(148,163,184,0.2),transparent_50%)]"></div>
         <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.2),transparent_50%)] dark:bg-[radial-gradient(circle_at_80%_20%,rgba(100,116,139,0.1),transparent_50%)]"></div>
@@ -56,7 +56,7 @@ const App = () => {
           screen={screen} 
           setScreen={handleSetScreen} 
         />
-
+        
         {/* HeroSection - Only show on main screen */}
         {screen === "main" && (
           <div className="animate-fade-in -mt-25 transition-all duration-300 mx-auto">

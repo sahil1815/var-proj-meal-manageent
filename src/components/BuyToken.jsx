@@ -131,6 +131,7 @@ const BuyToken = ({ student, onPurchaseComplete, onBack }) => {
             <option value="">Choose time...</option>
             <option value="Lunch">Lunch</option>
             <option value="Dinner">Dinner</option>
+            <option value="Both">Both</option>
           </select>
         </div>
 
@@ -147,7 +148,7 @@ const BuyToken = ({ student, onPurchaseComplete, onBack }) => {
                 className="mr-3"
               />
               <span className="flex-1">Regular Token</span>
-              <span className="font-semibold text-gray-700">{regularPrice} Taka</span>
+              <span className="font-semibold text-gray-700">{mealTime == "Both" ? 80 : regularPrice} Taka</span>
             </label>
             
             <label className={`flex items-center p-3 border rounded-lg ${
